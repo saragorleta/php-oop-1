@@ -12,9 +12,11 @@ class Movie {
       this->genere= $_genere;
     }
     // METODO
-    public function setVisione($eta){
+    public function setVisione($eta){   //$eta deve essere presente come proprietà all'interno di movie?
       if ($eta<18){
         $this->visione= 'non puoi vedere il film che hai scelto';
+      } else {
+        $visione
       }
 
     }
@@ -27,5 +29,6 @@ $filmDrammatico = new Movie ('Drammatico');
 echo $filmDrammatico;
 
 // RICHIAMO METODO
-$mancataVisione->setVisione('non puoi vedere il film che hai scelto');
+$mancataVisione->setVisione('19');
+$mancataVisione->getVisione();
 echo $mancataVisione->getVisione();
