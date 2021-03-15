@@ -9,14 +9,14 @@ class Movie {
 
     // COSTRUTTORE
     public function __construct ($_genere) {
-      this->genere= $_genere;
+      $this->genere = $_genere;
     }
     // METODO
     public function setVisione($eta){   //$eta deve essere presente come proprietà all'interno di movie?
       if ($eta<18){
         $this->visione= 'non puoi vedere il film che hai scelto';
       } else {
-        $visione
+        $this ->visione= 'puoi vedere il film';
       }
 
     }
@@ -29,6 +29,6 @@ $filmDrammatico = new Movie ('Drammatico');
 echo $filmDrammatico;
 
 // RICHIAMO METODO
-$mancataVisione->setVisione('19');
-$mancataVisione->getVisione();
-echo $mancataVisione->getVisione();
+$filmDrammatico->setVisione('19');
+//$mancataVisione->getVisione();
+echo $filmDrammatico->getVisione();
